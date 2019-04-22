@@ -2,17 +2,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch localhost",
+            "name": "Build and Run",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost/index.html",
-            "webRoot": "${workspaceFolder}/wwwroot"
+            "url": "http://localhost/",
+            "preLaunchTask": "build&run",
+            "postDebugTask": "kill"
         },
         {
-            "name": "Launch index.html",
+            "name": "Run",
             "type": "chrome",
             "request": "launch",
-            "file": "${workspaceFolder}/wwwroot/index.html"
-        },
+            "url": "http://localhost/",
+            "preLaunchTask": "run",
+            "postDebugTask": "kill"
+        }
     ]
 }
