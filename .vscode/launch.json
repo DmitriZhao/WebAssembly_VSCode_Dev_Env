@@ -7,7 +7,8 @@
             "request": "launch",
             "url": "http://localhost/",
             "preLaunchTask": "build&run",
-            "postDebugTask": "kill"
+            "postDebugTask": "kill",
+            "runtimeExecutable": "/usr/bin/google-chrome-stable"
         },
         {
             "name": "Run",
@@ -15,7 +16,8 @@
             "request": "launch",
             "url": "http://localhost/",
             "preLaunchTask": "run",
-            "postDebugTask": "kill"
+            "postDebugTask": "kill",
+            "runtimeExecutable": "/usr/bin/google-chrome-stable"
         }
     ]
 }

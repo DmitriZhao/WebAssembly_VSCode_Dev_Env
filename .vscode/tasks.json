@@ -4,7 +4,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "docker run --rm -it -v ${workspaceFolder}:/src apiaryio/emcc sh -c \"mkdir -p build && cd build && emcmake cmake .. && make -j\""
+            "command": "docker run --rm -it -v ${workspaceFolder}:/src apiaryio/emcc sh -c \"mkdir -p build && cd build && emconfigure cmake .. && emmake make -j\""
         },
         {
             "label": "run",
@@ -15,12 +15,15 @@
             "label": "build&run",
             "type": "shell",
             "command": "docker run  --rm --name nginx-server -p 80:80 -v ${workspaceFolder}/www:/usr/share/nginx/html:ro -d nginx",
-            "dependsOn": ["build"]
+            "dependsOn": [
+                "build"
+            ]
         },
         {
             "label": "kill",
             "type": "shell",
-            "command": "docker container kill nginx-server"
+            "command": "docker container kill nginx-server",
+            "problemMatcher": []
         }
     ]
 }
