@@ -9,8 +9,7 @@
         {
             "label": "run",
             "type": "shell",
-            "command": "docker run  --rm --name nginx-server -p 80:80 -v ${workspaceFolder}/www:/usr/share/nginx/html:ro -d nginx",
-            "dependsOn":["kill"]
+            "command": "docker run  --rm --name nginx-server -p 80:80 -v ${workspaceFolder}/www:/usr/share/nginx/html:ro -d nginx"
         },
         {
             "label": "build&run",
