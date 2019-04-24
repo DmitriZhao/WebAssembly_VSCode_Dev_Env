@@ -24,10 +24,17 @@
 
         code WebAssembly_VSCode_Dev_Env
 
+## Build the project
+
+1. Press **CTRL+SHIFT+P**, enter "Tasks: Run Task"
+
+2. Choose "build"
+
+
 ## Start debugging
 
 1. Click on the debug icon in the sidebar, or just press **CTRL+SHIFT+D**
 
-2. Choose the "Build and Run" preset
+2. Choose the "Run" preset
 
 3. Click on the green start button

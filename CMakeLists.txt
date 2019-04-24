@@ -10,4 +10,5 @@ set(EXECUTABLE_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/www")
 set(LIBRARY_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/lib")
 
 aux_source_directory("${PROJECT_SOURCE_DIR}/src" SOURCE_LIST)
-add_executable(demo "${SOURCE_LIST}")
+add_executable(hello "${PROJECT_SOURCE_DIR}/src/hello.cc")
+add_executable(export1 "${PROJECT_SOURCE_DIR}/src/export1.cc")

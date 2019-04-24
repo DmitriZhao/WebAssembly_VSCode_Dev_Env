@@ -1,8 +1,8 @@
 //hello.cc
-#include <iostream>
+#include <cstdio>
 
 int main( void )
 {
-    std::cout << "Hello, world!" << std::endl;
+    printf("Hello, world!\n");
     return 0;
 }

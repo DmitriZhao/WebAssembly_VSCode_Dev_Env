@@ -7,15 +7,15 @@
             "command": "docker run --rm -it -v ${workspaceFolder}:/src apiaryio/emcc sh -c \"mkdir -p build && cd build && emconfigure cmake .. && emmake make -j\""
         },
         {
-            "label": "run",
+            "label": "run_server",
             "type": "shell",
             "command": "docker run  --rm --name nginx-server -p 80:80 -v ${workspaceFolder}/www:/usr/share/nginx/html:ro -d nginx"
         },
         {
-            "label": "build&run",
+            "label": "run_and_append_mime",
             "type": "shell",
-            "command": "docker run  --rm --name nginx-server -p 80:80 -v ${workspaceFolder}/www:/usr/share/nginx/html:ro -d nginx",
-            "dependsOn": ["build"]
+            "command": "docker exec nginx-server sh -c \"sed -i '/default_type  application/octet-stream;/atypes {application/wasm wasm;}' /etc/nginx/nginx.conf\"",
+            "dependsOn": ["run_server"]
         },
         {
             "label": "kill",
