@@ -26,7 +26,7 @@
 
 ## Build the project
 
-1. Press **CTRL+SHIFT+P**, enter "Tasks: Run Task"
+1. Press **CTRL+SHIFT+T**
 
 2. Choose "build"
 
